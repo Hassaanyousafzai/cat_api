@@ -61,6 +61,15 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          SizedBox(
+            height: 50,
+          ),
+          const Center(
+            child: Text(
+              "Catto Fact?",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+          ),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.only(top: 100),
@@ -76,13 +85,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   } else {
                     return Column(
                       children: [
-                        const Center(
-                          child: Text(
-                            "Catto Fact?",
-                            style: TextStyle(
-                                fontSize: 30, fontWeight: FontWeight.bold),
-                          ),
-                        ),
                         const SizedBox(
                           height: 50,
                         ),
@@ -106,31 +108,29 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           Center(
-            child: Expanded(
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 150.0),
-                child: InkWell(
-                  onTap: () {
-                    setState(() {
-                      num = randomNumber();
-                    });
-                  },
-                  child: Container(
-                    height: 50,
-                    width: 200,
-                    decoration: BoxDecoration(
-                      color: Colors.amber,
-                      // border: Border.all(width: 1),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Click for a Fact :D",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 150.0),
+              child: InkWell(
+                onTap: () {
+                  setState(() {
+                    num = randomNumber();
+                  });
+                },
+                child: Container(
+                  height: 50,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: Colors.amber,
+                    // border: Border.all(width: 1),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "Click for a Fact :D",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                     ),
                   ),
